@@ -323,7 +323,7 @@ long LinuxParser::UpTime(int pid) {
     }
     // The 22th string is uptime
     linestream >> value;
-    uptime += std::stol(value) / sysconf(_SC_CLK_TCK);
+    uptime = std::stol(value) / sysconf(_SC_CLK_TCK);
   }
   return uptime;
 }
