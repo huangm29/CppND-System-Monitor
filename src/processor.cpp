@@ -4,10 +4,10 @@
 
 #include "linux_parser.h"
 
-// TODO: Return the aggregate CPU utilization
+// Return the aggregate CPU utilization
 float Processor::Utilization() {
   auto act_time = LinuxParser::ActiveJiffies();
-  auto total_time = LinuxParser::Jiffies();  // TODO: See src/processor.cpp
+  auto total_time = LinuxParser::Jiffies();
   auto act_time_prev = acttime();
   auto total_time_prev = totaltime();
   acttime(act_time);

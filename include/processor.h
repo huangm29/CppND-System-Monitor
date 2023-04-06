@@ -8,7 +8,7 @@ class Processor {
   long int acttime();
   void totaltime(long totaltime);
   long int totaltime();
-  // TODO: Declare any necessary private members
+
  private:
   long acttime_;
   long totaltime_;

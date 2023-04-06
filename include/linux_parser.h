@@ -18,6 +18,15 @@ const std::string kVersionFilename{"/version"};
 const std::string kOSPath{"/etc/os-release"};
 const std::string kPasswordPath{"/etc/passwd"};
 
+// Keys
+const std::string filterProcesses("processes");
+const std::string filterRunningProcesses("procs_running");
+const std::string filterUID("Uid:");
+const std::string filterProcMem("VmSize:");
+// I tried with "VmRSS:" here (which reads the physical RAM rather than virtual
+// memory size) but the monitor crashes sometimes as I guess the memory usage is
+// too large to be shown. Changing unit or increase the width may help.
+
 // System
 float MemoryUtilization();
 long UpTime();
