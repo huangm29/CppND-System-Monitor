@@ -25,7 +25,8 @@ const std::string filterUID("Uid:");
 const std::string filterProcMem("VmSize:");
 // I tried with "VmRSS:" here (which reads the physical RAM rather than virtual
 // memory size) but the monitor crashes sometimes as I guess the memory usage is
-// too large to be shown. Changing unit or increase the width may help.
+// too large to be shown (I used WSL environment, which may be part of the
+// problem).
 
 // System
 float MemoryUtilization();
